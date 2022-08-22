@@ -1,0 +1,69 @@
+$primary-background-color: #9e9e9e12;
+$primary-border: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+
+body {
+  background-color: $primary-background-color;
+}
+
+.window {
+  position: fixed;
+  background-color: rgba(var(--d87, 255, 255, 255), 1);
+  border: $primary-border;
+  border-radius: 1px;
+  width: 350px;
+  height: 396px;
+  left: 40%;
+  top: 15%;
+  padding: 10px 0;
+
+  .logo-wrapper {
+    text-align: center;
+    margin-top: 30px;
+    .logo-text {
+      font-family: "Lobster", cursive;
+      font-size: 45px;
+    }
+  }
+
+  
+  .form-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 348px;
+    height: 265px;
+    margin-top: -28px;
+
+    .inputStyle {
+      width: 258px;
+      height: 20px;
+      margin: 0px 40px 6px;
+      padding: 9px 0px 7px 8px;
+      border: $primary-border;
+      background-color: $primary-background-color;
+    }
+    .buttonStyle:disabled {
+      background-color: rgba(var(--d69, 0, 149, 246), 0.3);
+      cursor: default;
+    }
+    .buttonStyle {
+      width: 270px;
+      height: 30px;
+      margin: 8px 40px 8px;
+      background-color: #0095f6;
+      border-width: 0px;
+      border-radius: 3px;
+      color: white;
+      cursor: pointer;
+    }
+  }
+
+  .extra-wrapper {
+    font-size: 12px;
+    text-align: center;
+
+    .link {
+      text-decoration: none;
+    }
+  }
+}
