@@ -1,0 +1,48 @@
+{
+  "feedData": [
+    {
+      "id": 0,
+      "user": "you8in",
+      "img": "/images/feed3.png",
+      "content": "중심도 잃고... 목소리도 잃고...ㅇㅅㅠ",
+      "comments": [
+        {
+          "id": 0,
+          "user": "elena",
+          "comment": "you are my ff, cheerup"
+        },
+        {
+          "id": 1,
+          "user": "amnoteden",
+          "comment": "HAE"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "user": "youbin",
+      "img": "/images/feed2.png",
+      "content": "🔥🔥",
+      "comments": [
+        {
+          "id": 0,
+          "user": "firelee",
+          "comment": "버텨줄개~"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "user": "you8in",
+      "img": "/images/feed1.png",
+      "content": "화이팅~!",
+      "comments": [
+        {
+          "id": 0,
+          "user": "vibivbi",
+          "comment": "잘 해보자!👏🏻"
+        }
+      ]
+    }
+  ]
+}
