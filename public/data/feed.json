@@ -1,0 +1,55 @@
+{
+  "feedData": [
+    {
+      "feedId": 0,
+      "userName": "buddistMonk_youngin",
+      "img": "/images/main_img/post_img/momo.JPG",
+      "content": "모모",
+      "like": 452,
+      "comments": [
+        {
+          "id": 0,
+          "userName": "Justcode",
+          "comment": "저스트코드에 오신 것을 환영합니다.",
+          "like": 0
+        },
+        {
+          "id": 1,
+          "userName": "Wenotwork",
+          "comment": "위워크는 역삼점이 좋다던데..",
+          "like": 0
+        }
+      ]
+    },
+    {
+      "feedId": 1,
+      "userName": "buddist monk_youngin",
+      "img": "/images/main_img/post_img/1.jpeg",
+      "content": "it's me",
+      "like": 64,
+      "comments": [
+        {
+          "id": 0,
+          "userName": "Bbororo",
+          "comment": "뭘보냐?",
+          "like": 0
+        }
+      ]
+    },
+    {
+      "feedId": 2,
+      "userName": "buddist monk_youngin",
+      "img": "/images/main_img/post_img/2.JPG",
+      "content": "sea",
+      "like": 798,
+      "comments": [
+        {
+          "id": 0,
+          "userName": "Rupy",
+          "comment": "가던 길 가라.",
+          "like": 0
+        }
+      ]
+    }
+  ]
+}

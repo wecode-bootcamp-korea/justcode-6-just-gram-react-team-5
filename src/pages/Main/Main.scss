@@ -1,0 +1,265 @@
+* {
+  box-sizing: border-box;
+  
+  .main{
+    input:focus {
+      outline: none;
+    }
+    
+    textarea:focus {
+      outline: none;
+    }
+  
+    // 상단 고정 탭
+    header {
+      display: flex;
+      justify-content: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 61px;
+      border-bottom: solid 1px #DBDBDB;
+      background-color: white;
+  
+      #header-tab {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 900px;
+        height: 60px;
+        padding: 0 20px;
+  
+        .main-btn{
+          height: 30px;
+        }
+  
+        #search-box {
+          width: 268px;
+          height: 36px;
+          padding-left: 10px;
+          border-radius: 7px;
+          border: none;
+          background-color: #EFEFEF;
+          font-size: 15px;
+          font-weight: 100;
+        }
+  
+        #list-box {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 230px;
+  
+          a {
+            height: 24px;
+          }
+        }
+      }
+    }
+  
+    // 하단 메인 탭
+    #main-container {
+      display: flex;
+      /* justify-content: space-between; */
+      width: 821px;
+      margin: 80px auto 30px auto;
+  
+      // 하단 메인탭 왼쪽
+      #inside-container1 {
+        display: flex;
+        flex-direction: column;
+  
+        // 게시글
+        .post-box {
+          display: flex;
+          flex-direction: column;
+          width: 470px;
+          border: solid 1px #DBDBDB;
+          border-radius: 7px;
+          margin: 6px 0;
+  
+          .post-box-user {
+            display: flex;
+            align-items: center;
+            height: 56px;
+            border-radius: 7px;
+  
+            a {
+              height: 32px;
+              margin: 8px 4px 8px 12px;
+            }
+  
+            .post-box-user-name {
+              display: flex;
+              align-items: center;
+              width: 350px;
+              height: 40px;
+              margin-left: 10px;
+  
+              a {
+                display: flex;
+                align-items: center;
+                font-weight: 600;
+                color: black;
+                text-decoration: none;
+                margin: 0;
+              }
+            }
+  
+            .option-btn {
+              display: flex;
+              align-items: center;
+              border: none;
+              width: 24px;
+              height: 24px;
+              padding-left: 20px;
+            }
+          }
+  
+          .post-box-img {
+            img{
+              width: 100%;
+              height: 100%;
+            }
+          }
+  
+          .reaction {
+            display: flex;
+            flex-direction: column;
+            border-radius: 7px;
+  
+            .reaction-btn {
+              display: flex;
+              justify-content: space-between;
+              padding: 10px;
+  
+              .reaction-btn-img {
+                display: flex;
+                justify-content: space-between;
+                width: 100px;
+
+                img {
+                  cursor: pointer;
+                }
+              }
+            }
+
+            .feedLike {
+              padding: 0 0 8px 10px;
+
+              a {
+                font-size: 14px;
+                font-weight: 700;
+                text-decoration: none;
+                color: black;
+              }
+            }
+  
+            .reaction-user-name {
+              width: 446px;
+              height: 24px;
+              margin: 0 auto;
+              font-size: 14px;
+              font-weight: 400;
+  
+              a {
+                color: black;
+                text-decoration: none;
+                font-size: 15px;
+                font-weight: 700;
+              }
+            }
+            
+            .comment{
+              box-sizing: border-box;
+              padding-left: 11px;
+
+              .add-comment {
+                display: flex;
+                justify-content: space-between;
+                margin: 0 0 6px 0;
+  
+                a {
+                  color: black;
+                  text-decoration: none;
+                  font-size: 15px;
+                  font-weight: 700;
+                  padding: 0 3px 0 0;
+                }
+  
+                .comments {
+                  font-size: 14px;
+                }
+              }
+
+              button {
+                display: flex;
+                align-items: center;
+                background-color: white;
+                border: none;
+                margin-right: 5px;
+
+                img {
+                  width: 12px;
+                }
+              }
+            }
+
+            .reaction-comment-box {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 49px;
+              padding: 0 12px;
+              border-top: solid 1px #EFEFEF;
+              border-radius: 7px;
+  
+              .input-comment {
+                width: 100%;
+                height: 18px;
+                border: none;
+              }
+  
+              .input-comment-btn {
+                font-size: 14px;
+                font-weight: 600;
+                width: 30px;
+                padding: 0;
+                background-color: white;
+                border: none;
+                // color: #CBE5FD;
+                cursor: default;
+              }
+            }
+          }
+        }
+      }
+  
+      // 하단 메인탭 오른쪽
+      #inside-container2 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+  
+        #profile-box {
+          display: flex;
+          justify-content: left;
+          align-items: center;
+          margin: 20px 0 0 30px;
+  
+          #profile-box-name {
+            margin-left: 20px;
+            font-weight: 500;
+          }
+        }
+  
+        #other {
+          margin: 20px 0 0 30px;
+          color: #c9c9c9;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
