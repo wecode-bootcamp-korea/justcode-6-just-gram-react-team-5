@@ -3,6 +3,8 @@ import { useState, useRef } from "react";
 
 function Comments(props) {
 
+  const { feeds } = props;
+
   const [btn, setBtn] = useState(true);
   // const [id, setId] = useState(0);
   const [btnColor, setBtnColor] = useState('#CBE5FD');
@@ -20,10 +22,10 @@ function Comments(props) {
   
   const addComment = () => {
     // setId(id + 1);
-    let newComment = [...props.feeds];
+    let newComment = [...feeds];
 
     newComment[props.i].comments[newComment[props.i].comments.length] = {
-      id: props.feeds[props.i].comments.length,
+      id: feeds[props.i].comments.length,
       userName: 'buddistMonk_youngin',
       comment: value.current.value,
     }

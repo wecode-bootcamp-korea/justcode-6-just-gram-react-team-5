@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 function Nav(props) {
 
+  const { email } = props;
+
   const [navImg] = useState([ //nav 이미지 경로
     "/images/main_img/img/hut.png",
     "/images/main_img/img/dm.png",
@@ -22,14 +24,14 @@ function Nav(props) {
         </Link>
         <input type="text" placeholder="검색" id="search-box" />
         <span id="list-box">
-          {navImg.map((el, i) => {
+          {navImg.map((navImg, i) => {
             return (
               <Link to="" key={i}>
-                <img src={el} alt="" width={"24px"} />
+                <img src={navImg} alt="" width={"24px"} />
               </Link>
             );
           })}
-          {props.email ? props.email :
+          {email ? email :
           <Link to="">
             <img src={"/images/main_img/img/profile.png"} alt="" width={"24px"} />
           </Link>}

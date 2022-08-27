@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Feeds from "./Feed";
+import Feeds from "./Feeds";
 import Nav from "./Nav";
 import "./Main.scss";
 

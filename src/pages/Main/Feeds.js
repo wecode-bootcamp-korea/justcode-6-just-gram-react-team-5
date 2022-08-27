@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Comments from "./Comments";
 
-
 function Feeds() {
 
   const buttonImg = [

@@ -1,5 +1,5 @@
 // import React from "react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Login.scss";
 
@@ -7,13 +7,13 @@ function Login() {
 
   const navigate = useNavigate();
 
-  const [idValue, setIdValue] = useState('');
+  const [emailValue, setIdValue] = useState('');
   const [pwValue, setPwValue] = useState('');
-  const [loginData, setLoginData] = useState('');
+  // const [loginData, setLoginData] = useState('');
   const [loginBtn, setLoginBtn] = useState(true);
   const [background, setBackground] = useState('#C0DFFD');
 
-  
+
   const handleIdInput = (event) => {
     setIdValue(event.target.value);
   };
@@ -23,34 +23,33 @@ function Login() {
   };
   
   const atvBtn = () => {
-    let condition = idValue.indexOf("@") !== -1 && pwValue.length > 4;
+    let condition = emailValue.indexOf("@") !== -1 && pwValue.length > 4;
     condition ? setLoginBtn(false) : setLoginBtn(true);
     condition ? setBackground('#0095f6') : setBackground('#C0DFFD');
   }
 
-  useEffect(() => {
-    if (loginData) {
-      fetch("http://auth.jaejun.me:10010/login", {
+  const onClick = () => {
+    fetch("http://auth.jaejun.me:10010/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(loginData),
+        body: JSON.stringify({
+          "email": emailValue,
+          "password": pwValue
+        }),
       })
         .then((res) => res.json())
         .then((data) => {
           if (data.access_token) {
             localStorage.setItem("token", data.access_token);
             navigate("/main");
-            // console.log(localStorage.getItem('token'));
           } else {
             alert("다시");
           }
-          setLoginData("");
         });
-    }
-  });
-  // console.log();
+    console.log(123123);
+  }
 
   return (
     <div className="main-box">
@@ -82,12 +81,7 @@ function Login() {
             type="button"
             className="login-btn"
             value="로그인"
-            onClick={()=>{
-              setLoginData({
-                "email": idValue,
-                "password": pwValue
-              })
-            }}
+            onClick={onClick}
             disabled={loginBtn}
             style={{background: background}}
           />
